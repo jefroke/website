@@ -1,5 +1,5 @@
 # Cloudflare Workers Konfiguration für jessekeller.de
-name = "jesse-keller-website"
+name = "jessekeller-de"
 compatibility_date = "2025-12-28"
 
 [build]
