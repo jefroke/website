@@ -1,26 +1,7 @@
 # Cloudflare Workers Konfiguration für jessekeller.de
 name = "jesse-keller-website"
-compatibility_date = "2024-12-01"
+compatibility_date = "2025-12-28"
 
-# Für Astro Static Site
-main = "dist/_worker.js"
-
-# Assets-Konfiguration
+# Static Assets Deployment (kein Worker-Script nötig)
 [assets]
-directory = "dist"
-binding = "ASSETS"
-
-# Custom Domain
-routes = [
-  { pattern = "jessekeller.de", custom_domain = true },
-  { pattern = "www.jessekeller.de", custom_domain = true }
-]
-
-# Umgebungsvariablen (optional)
-[vars]
-SITE_NAME = "Jesse Keller"
-
-# Preview-Umgebung für Entwicklung
-[env.preview]
-name = "jesse-keller-website-preview"
-routes = []
+directory = "./dist"
