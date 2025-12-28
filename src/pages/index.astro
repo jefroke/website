@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Start">
+  <section class="py-16 sm:py-24">
+    <div class="container-narrow text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+        Hallo, ich bin Jesse
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+        Hier findest du Unterlagen und Software, die ich erstellt habe.
+        Vor allem Lilypond-Dateien mit Musikstücken aus der Schule.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/musik" class="btn btn-primary">
+          Zur Musik
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-narrow">
+      <h2 class="text-2xl font-bold mb-8 text-center">Was gibt es hier?</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card title="Musiknoten" icon="🎼" href="/musik">
+          Lilypond-Dateien mit Liedern und Stücken aus dem Musikunterricht
+          an der Freien Waldorfschule Hannover Maschsee.
+        </Card>
+        <Card title="Lilypond-Quelldateien" icon="📝">
+          Alle Noten sind als Lilypond-Quelldateien verfügbar,
+          sodass du sie bearbeiten und anpassen kannst.
+        </Card>
+        <Card title="MIDI-Dateien" icon="🎵">
+          Zu vielen Stücken gibt es auch MIDI-Dateien zum Anhören
+          und Üben.
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container-narrow">
+      <h2 class="text-2xl font-bold mb-8 text-center">Aktuelles Stück</h2>
+      <div class="card max-w-xl mx-auto">
+        <h3 class="text-lg font-semibold mb-2">Der Winter ist ein rechter Mann</h3>
+        <p class="text-slate-600 text-sm mb-4">
+          Komponist: P. Appenzeller | Text: M. Claudius<br>
+          Arrangiert für zwei Violinen und Gesang.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <a
+            href="/musik/der-winter-ist-ein-rechter-mann.ly"
+            download
+            class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm transition-colors"
+          >
+            🎼 Lilypond (.ly)
+          </a>
+          <a
+            href="/musik/der-winter-ist-ein-rechter-mann.midi"
+            download
+            class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm transition-colors"
+          >
+            🎵 MIDI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
